@@ -40,7 +40,7 @@ website:
     - title: "Help"
       style: "docked"
       contents:
-        - troubleshooting.qmd
         - feedback.qmd
+        - troubleshooting.qmd
         - faqs.qmd                    
   
