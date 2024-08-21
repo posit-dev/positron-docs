@@ -5,7 +5,7 @@ project:
 website:
   page-footer:
     left: |
-      Copyright &copy; 2000-{{< env CURRENT_YEAR >}} Posit Software, PBC. All Rights Reserved.
+      Copyright &copy; 2024 Posit Software, PBC. All Rights Reserved.
     center:
       - text: "Positron License"
         href: licensing.qmd
