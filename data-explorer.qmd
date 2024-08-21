@@ -1,0 +1,53 @@
+---
+title: "Data Explorer"
+---
+
+The Data Explorer is intended to complement code-first exploration of data, allowing you to display data in a spreadsheet-like grid, temporarily filter and sort data, and provide useful summary statistics directly inside of Positron. The goal of the Data Explorer is not to replace code-based workflows, but rather supplement with ephemeral views of the data or summary statistics as you further explore or modify the data via code.
+
+The Data Explorer has three primary components, discussed in greater detail in the sections below:  
+
+* Data Grid: Spreadsheet-like display of the individual cells and columns, as well as sorting  
+* Summary panel: Column name, type and missing data percentage for each column  
+* Filter bar: Ephemeral filters for specific columns 
+
+![Data Explorer](https://github-production-user-asset-6210df.s3.amazonaws.com/29187501/343593485-d2a83395-19e4-4f2c-be0c-a6266fc11ee4.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240821%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240821T212127Z&X-Amz-Expires=300&X-Amz-Signature=d420b82ceab2ab38d7710fabde204c292de9cc51460e0152b8ac308b29321d46&X-Amz-SignedHeaders=host&actor_id=12505835&key_id=0&repo_id=495976441)
+
+
+## Open a dataframe in the Data Explorer
+
+Each instance of the Data Explorer tool is powered by a language runtime and can display dataframes in Python (`pandas`) or R (`data.frame`, `tibble`, `data.table`). We also have experimental support for `polars`, and additional Python dataframe libraries will be added in the future.  
+
+Each instance of the data explorer will be refreshed with changes made to the underlying data. This allows combined workflows between the UI-centric Data Explorer and a code-first approach.
+
+To open a new instance of the Data Explorer on a specific data frame, use one of the following methods:  
+
+* Use the language runtime directly:  
+    * Via Python: `%view dataframe label` 
+    * Via R: `View(dataframe, "label")`
+* Navigate to the variables pane and click on the Data Explorer icon for a specific dataframe object  
+
+![Data Explorer from the Variables pane](https://github-production-user-asset-6210df.s3.amazonaws.com/29187501/343593548-4e8e2a81-9a8e-4290-8240-6a14d5d239ed.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240821%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240821T212347Z&X-Amz-Expires=300&X-Amz-Signature=38b6b82914d540ca99bfa684545a9c7d6d303be3250ab47882cfef784db03bad&X-Amz-SignedHeaders=host&actor_id=12505835&key_id=0&repo_id=495976441)
+
+
+## Data grid
+
+The data grid is the primary display, with a spreadsheet-like cell by cell view. It is intended to scale efficiently to relatively large in-memory datasets, up to millions of rows or columns. Each column header has the column name above the data type as used in the language runtime. There is a context menu at the top right of each column to control sorting or quick-add of a filter for the selected column. Columns are resizable by click and drag of the column borders. 
+
+![Data Explorer Column Menu](https://github-production-user-asset-6210df.s3.amazonaws.com/29187501/343593606-91f03e0d-6cb6-4d9b-9a62-e90959ffd536.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240821%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240821T212416Z&X-Amz-Expires=300&X-Amz-Signature=3f63d1594631b354b3173994329bf5c722184806669baad9510e15af16a735d8&X-Amz-SignedHeaders=host&actor_id=12505835&key_id=0&repo_id=495976441)
+
+
+Row labels default to the observed row index, with a zero-based index in Python and a one-based index in R. Alternatively, `pandas` and R users may also have rows with modified indices or string-based labels. 
+
+## Summary panel
+
+The summary panel displays a vertical scrolling list of all of the column names and an incon representing their respective type. It also displays the amount of missing data as a increasing percentage and an inline bar graph. 
+
+![Data Explorer Summary Panel](https://github-production-user-asset-6210df.s3.amazonaws.com/29187501/343593768-8514760c-1baa-4a79-9a1c-cd44af6b14f6.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240821%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240821T212448Z&X-Amz-Expires=300&X-Amz-Signature=86b84d103bdd1a8d49f63dd33873bf1125775c086d04a54aae3ae266235e75a4&X-Amz-SignedHeaders=host&actor_id=12505835&key_id=0&repo_id=495976441)
+
+Double clicking on a column name will also bring the column into focus in the data grid, allowing for quickly navigating wider data. The summary panel can be placed on the left or right side of the Data Explorer or temporarily hidden via the Layout control.
+
+## Filter bar
+
+The filter bar has controls to show, hide, or remove existing filters as well as a <kbd>+</kbd> button to add a new filter. The status bar at the bottom of the Data Explorer also displays the percentage and number of remaining rows after applying a filter. When creating a new filter, you will first need to select a column either by scrolling the full list or searching across columns for a specific string. Once a column is selected, the available filters for that column type will be displayed. Alternatively, the context menu in each column label of the data grid also allows for creating filters with the column name pre-populated.
+
+Available filters vary according to the column type. For example, string columns have filter affordances for: contains, starts or ends with, is empty, or exact matches. Alternatively, numeric columns have logical operations such as: is less than or greater than, is equal to, or is inclusively between two values. 

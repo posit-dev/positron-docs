@@ -1,0 +1,45 @@
+---
+title: "Connections Pane"
+---
+
+The Connections Pane allows you to explore database connections created within your R or Python sessions.
+It also includes basic support for storing and managing connection strings for future usage.
+
+![Display of the connections pane](images/connections-pane.png)
+
+## Opening a connection using R
+
+To open a connection in Positron Connections Pane, you just need to connect to a database using using any
+package that supports the connections contract, such as [`odbc`](https://github.com/r-dbi/odbc), [`sparklyr`](https://github.com/rstudio/sparklyr),
+[bigrquery](https://github.com/r-dbi/bigrquery) and others.
+
+The Positron Connections Pane implements [RStudio's connections contract](https://rstudio.github.io/rstudio-extensions/connections-contract.html), this means that any package that works within RStudio's Connections Pane should work within the Positron Connections Pane.
+
+Here is an example of how to open a connection using the [`connections`](https://github.com/rstudio/connections) package to open a SQLite connection:
+
+``` r
+tmp <- tempfile()
+dir.create(tmp)
+dbplyr::nycflights13_sqlite(path = tmp)
+con <- connections::connection_open(RSQLite::SQLite(), file.path(tmp, "nycflights13.sqlite"))
+```
+
+You can find more information about connecting to an specific database by following [this link](https://solutions.posit.co/connections/db/databases/).
+
+## Opening a connection using Python
+
+Currently we only support connections created using `sqlite3` and [`SQLAlchemy`](https://www.sqlalchemy.org) modules.
+To open a connection in the connections pane, create a top level object that represents the connection/engine.
+
+``` python
+import sqlite3
+conn = sqlite3.connect("nycflights13.sqlite")
+```
+
+You can then either use `%connection_show conn` to open the connection in the connections pane or click in
+the database icon that appears close to the object name in the variables pane.
+
+![Variables pane showing a connection object](images/connections-pane-variables-pane.png)
+
+That should bring up the connections pane, allowing you to navigate the database.
+

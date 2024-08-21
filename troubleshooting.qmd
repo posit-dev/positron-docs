@@ -1,0 +1,51 @@
+---
+title: "Troubleshooting"
+---
+
+If you're having trouble with Positron, here are some and tools to help you get back on track.
+
+## Reloading
+
+Positron is an Electron app. If you're seeing what looks like a temporary glitch, you can try reloading the window. To do this, from the Command Palette, run the _Developer: Reload Window_ command.
+
+A window reload shouldn't cause you to lose any state, but it does cause the Positron front end and all language packs to restart. 
+
+## Python and R Logs
+
+### Output Panel
+
+Python and R logs are emitted in the Output panel. Each one starts several output channels that can be used to help diagnose problems with a respective part of the system. 
+
+Run the _Output: Show Output Channels_ command to show a list of output channels. You can then select one to view its output by name, like "Positron R Extension". Here's a list of some Positron-specific channels you may be interested in:
+
+| Channel | Description |
+| ------- | ----------- |
+| Console: Python X.Y.Z | Communication with the Python kernel: requests to execute code, output shown in the Console, data used to build plots/environment/help panes, etc. |
+| Console: R X.Y.Z | Communication with the R kernel (similar to Python) |
+| Python Language Server | Debug logs from the server side of Positron's Python language server |
+| Positron R Language Server | Debug logs from the server side of Positron's R language server |
+
+### Log Level
+
+Most of these output channels have a log level associated with them that you can change in the settings UI. 
+
+## Developer Tools
+
+When looking for the source of an error, the developer tools can be helpful. From the Command Palette, run the _Developer: Toggle Developer Tools_ command. Then, from the Developer Tools panel that appears, select the _Console_ tab.
+
+If you see an error in the developer tools related to the issue you're seeing, please include it when filing an issue on Github.
+
+## Resetting Positron
+
+If you seem to have gotten things in a bad state, you can reset Positron to factory-fresh as follows. Close all Positron instances, then delete its state files:
+
+```bash
+rm -rf "~/Library/Application Support/Positron"
+rm -rf ~/.positron
+```
+
+Then, download the [latest release](https://github.com/posit-dev/positron/releases) of Positron and install it.
+
+## Ask for Help
+
+Finally, ask for help early and often. If you're having trouble as one of our beta testers, we'd like to hear about it, perhaps even before you blow away any state that might tell us what the issue was. Join us on [GitHub Discussions](https://github.com/posit-dev/positron/discussions)!

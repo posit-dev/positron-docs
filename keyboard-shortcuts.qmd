@@ -1,0 +1,78 @@
+---
+title: "Keyboard Shortcuts"
+---
+
+Positron's keyboard shortcuts, with a few exceptions, are a superset of the keyboard shortcuts used by Visual Studio Code. This table lists the shortcuts specifically added for Positron.
+
+## Global Shortcuts
+
+| Shortcut | Description |
+| -------- | ----------- |
+| <kbd>Cmd/Ctrl</kbd>+<kbd>Enter</kbd> | Run the selected code in the editor. If no code is selected, run the current statement. | 
+| <kbd>Cmd/Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>0</kbd> | Restart the interpreter currently open in the Console | 
+| <kbd>Cmd/Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Enter</kbd> | Run the file open in the editor (using e.g. `source()` or `%run`) | 
+| <kbd>F1</kbd> | Show contextual help for the topic under the cursor |
+| <kbd>Cmd/Ctrl</kbd>+<kbd>K</kbd>, <kbd>Cmd/Ctrl</kbd>+<kbd>R</kbd> | Show contextual help for the topic under the cursor (alternate binding) |
+| <kbd>Cmd/Ctrl</kbd>+<kbd>K</kbd>, <kbd>F</kbd> | Focus the Console |
+| <kbd>Ctrl</kbd>+<kbd>L</kbd> | Clear the Console |
+
+## R Shortcuts
+
+| Shortcut | Description |
+| -------- | ----------- |
+| <kbd>Cmd/Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>M</kbd> | Insert the pipe operator (<code>&#124;></code> or `%>%`) | 
+| <kbd>Alt</kbd>+<kbd>-</kbd> | Insert the assignment operator (`<-`) |
+| <kbd>Cmd/Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>L</kbd> | Load the current R package, if any | 
+| <kbd>Cmd/Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> | Build and install the current R package, if any | 
+| <kbd>Cmd/Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>T</kbd> | Test the current R package, if any | 
+| <kbd>Cmd/Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>E</kbd> | Check the current R package, if any | 
+| <kbd>Cmd/Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>D</kbd> | Document the current R package, if any | 
+
+## RStudio Keymap
+
+If you'd prefer to use RStudio keybindings, do the following:
+
+- Open Positron's settings (<kbd>Cmd</kbd>+<kbd>,</kbd> or <kbd>Ctrl</kbd>+<kbd>,</kbd>)
+- Search for "keymap", or navigate to *Extensions > RStudio Keymap*
+- Check the "Enable RStudio key mappings for Positron" checkbox
+
+The following RStudio keymappings will be enabled:
+
+| Shortcut | Description |
+| -------- | ----------- |
+| <kbd>Ctrl</kbd>+<kbd>1</kbd>  |  Focus Source | 
+| <kbd>Ctrl</kbd>+<kbd>2</kbd>  |  Focus Console | 
+| <kbd>Cmd/Ctrl</kbd>+<kbd>.</kbd>  |  Go to Symbol | 
+| <kbd>Cmd/Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd> |  Comment/Uncomment a line | 
+| <kbd>Cmd/Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>N</kbd> |  Create a new R file | 
+| <kbd>F2</kbd>  |  Go to definition | 
+| <kbd>Cmd/Ctrl</kbd>+<kbd>I</kbd> |  Reindent selection | 
+| <kbd>Cmd/Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>A</kbd> |  Reformat selection | 
+| <kbd>Cmd/Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>S</kbd> |  Source the current R script | 
+| <kbd>Cmd/Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>M</kbd> |  Rename | 
+| <kbd>Cmd/Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>I</kbd> |  Insert a new Quarto/R Markdown cell | 
+| <kbd>Cmd/Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>M</kbd> |  Open version control pane | 
+| <kbd>Cmd/Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Left</kbd> |  Go to previous tab | 
+| <kbd>Cmd/Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Right</kbd> |  Go to next tab | 
+| <kbd>Cmd/Ctrl</kbd>+<kbd>D</kbd> |  Delete the current line | 
+| <kbd>Cmd/Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>M</kbd> |  Insert pipe operator | 
+| <kbd>Cmd/Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>R</kbd> |  Insert section | 
+| <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>K</kbd> | Open global keybindings list |
+| <kbd>Alt</kbd>+<kbd>-</kbd> | Insert left assignment operator `<-` |
+
+## Custom Shortcuts
+
+Because Positron is built on top of VS Code, you can use [its infrastructure for defining custom keybindings](https://code.visualstudio.com/docs/getstarted/keybindings). You can use this infrastructure with any Positron-specific commands, such as `workbench.action.executeCode.console` or `workbench.action.executeCode.silently`. As a specific example, you could add this to your user `keybindings.json` (access this file from the command palette with "Open Keyboard Shortcuts (JSON)") to make a keyboard shortcut to create a reprex from your current selection:
+
+```json
+{
+    "key": "Cmd+Shift+R",
+    "command": "workbench.action.executeCode.console",
+    "when": "editorTextFocus",
+    "args": {
+        "langId": "r",
+        "code": "reprex::reprex_selection()",
+        "focus": true
+    }
+}
+```

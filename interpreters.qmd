@@ -1,0 +1,46 @@
+---
+title: "Interpreter Selection"
+---
+
+:::{.callout-note}
+This information applies to the **Public Beta** release of Positron. The rules governing interpreter selection, and the user experience around selecting an interpreter, are under active development. This guide is intended to help you understand the current behavior.
+:::
+
+## First Run
+
+When Positron starts for the first time in a new workspace, it will start Python and/or R depending on your workspace characteristics and whether there is evidence of RStudio being used recently.
+
+Typically when starting Python or R without other clues about which version to start, Positron will start the most recent version of the interpreter (e.g. if you have R 4.2 and R 4.3 installed, it'll start R 4.3).
+
+### RStudio Detection
+
+Positron tries to start R for R users and Python for Python users by checking to see whether RStudio is installed and has been recently used. The latter check is done by looking in `~/.local/share/rstudio` for files written less than a month ago, so if you don't want Positron to consider you to be an RStudio user, you can rename this folder temporarily.
+
+## Subsequent Runs
+
+When Positron starts in a workspace that has been used before, it will start the same interpreter(s) that were running the last time that you used that workspace.
+
+If Positron starts an interpreter you don't need, just shut it down (using the Power button in Console or the upper right) and it will stop starting automatically in that workspace. 
+
+## Implicit Startup
+
+In addition to starting up an interpreter when the workspace is first opened, Positron will also automatically start an interpreter when it looks like one is needed. For example, R will start:
+
+- When you open an R file
+- When you execute R code
+
+## Start, Stop, and Switch Interpreters
+
+Obviously, Positron might not always guess the right language for your workspace, or it might not use the right version of the interpreter. You can manually stop and start interpreters at any time in the top-right interpreter chooser (we call this the _Top Bar Interpreter Dropdown_ internally). You can have both Python and R interpreters active at the same time, but you may only have a single Python and a single R interpreter active at once.
+
+### Choose a new interpreter
+
+To change your interpreter -- for example, to select a different Python environment -- click on the horizontal ellipsis (⋯) next to the interpreter.
+
+![Interpreter dropdown](images/tbid.png)
+
+A list of other interpreter versions are shown; click the one you want.
+
+:::{.callout-warning}
+Changing interpreters causes the old interpreter to be shut down and the new one to be started. This means that any state in the old interpreter will be lost, including any variables you've defined. Make sure you've saved your work before switching versions.
+:::
