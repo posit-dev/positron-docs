@@ -5,11 +5,11 @@ project:
 website:
   page-footer:
     left: |
-      Copyright &copy; 2024 Posit Software, PBC. All Rights Reserved.
-    center:
-      - text: "Positron License"
-        href: licensing.qmd
+      Copyright &copy; 2022-2024 Posit Software, PBC. All Rights Reserved.
+    center: "Positron Public Beta"
     right:
+      - text: "License"
+        href: licensing.qmd
       - icon: question-circle-fill
         aria-label: 'Link to Posit Support'
         href: "https://support.posit.co/hc/en-us"
