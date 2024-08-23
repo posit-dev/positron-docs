@@ -1,4 +1,4 @@
-# positron-web
+# positron-docs
 
 This is the repo for the Positron documentation site. This site is built with [Quarto](https://quarto.org/) and the [Posit product documentation theme](https://github.com/posit-dev/product-doc-theme).
 
