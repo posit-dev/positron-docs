@@ -5,40 +5,33 @@ title: "Frequently Asked Questions"
 ### What programming languages are supported in Positron?
 
 * R and Python are first-class supported languages via efforts here at Posit.
-* Additional languages typically used in package development are supported via existing 3rd party extensions, that do not make use of the full Positron data science experience. Some examples include Rust, Javascript/Typescript, C/C++, or Lua. 
-* Positron provides public APIs for additional data-science languages to be supported in the future.
+* Additional languages typically used in package development are supported via existing third party extensions. These do not make use of the full Positron data science experience including an interactive console, plots, and similar. Some examples include Rust, Javascript/Typescript, C/C++, or Lua. 
+* Positron provides public APIs for additional data science languages to be supported in the future.
 
 ### How is Positron different from RStudio, VS Code, or Jupyter notebooks?
 
-* Positron has first-class, built-in support for R and/or Python via an integrated Console, with extensibility options for other languages in the future. This includes specialized views and panes throughout Positron such as a Data Explorer, Connections Pane, Variables Pane, and more.
-* Positron runs the interpreter separately from the IDE, so unlike in RStudio a crash in R/Python will not crash the IDE. It also means that you can swap between versions of your preferred language on the fly without a full reload of the IDE, just the integrated console.
-* Positron supports VS Code compatible extensions (.vsix files), allowing for the extensibility of capabilities beyond the core IDE itself. By building on Code OSS, Positron gets rich text editor capabilities and access to 1,000s of community extensions out of the box.
+* Positron has first-class, built-in support for R and/or Python via an integrated Console, with extensibility options for other languages in the future. This native support includes specialized views and panes throughout Positron such as a [Data Explorer](/data-explorer.qmd), [Connections Pane](connections-pane.qmd), Variables Pane, and more.
+* Positron runs the interpreter separately from the IDE, so unlike in RStudio a crash in R/Python will not always crash the IDE. It also means that you can swap between versions of your preferred language on the fly without a full reload of the IDE, just the integrated console.
+* Positron supports VS Code compatible extensions (`.vsix` files), providing extensibility of capabilities beyond the core IDE itself. By building on Code OSS, Positron gets rich text editor capabilities and access to 1,000s of community extensions out of the box. [Read more about using extensions with Positron](/start.qmd#extensions).
 * Positron is deeply focused on native data science workflows; it provides a batteries-included and cohesive experience beyond that of a general-purpose IDE or text editor such as VS Code. 
 
 ### Why build a new IDE rather than VS Code extensions?
 
-* Our aspirations for Positron go far beyond what is possible via just extensions. Ultimately, VS Code's Extension API doesn't give us enough leverage to modify the main "workbench" surface.
-* To deliver a truly good data science experience, we need to change and augment core components and UI elements that are outside the scope of VS Code's extension API.
+* Our aspirations for Positron go far beyond what is possible via only extensions. Ultimately, VS Code's Extension API doesn't provide enough leverage to modify the main "workbench" surface.
+* To deliver a truly excellent data science experience, we need to change and augment core components and UI elements that are outside the scope of VS Code's extension API.
 * We have developed some components as extensions for use in both Positron and VS Code, such as Quarto and Shiny for R/Python. However, given the additional API surface in Positron, we plan to progressively enhance these and future extensions when installed in Positron.
-
-### Is Quarto supported?
-
-* The Quarto extension is required to enable full use of Quarto and `.qmd` files
-* Open the Extensions tab via the vertical action bar on the left side of Positron
-* Search for Quarto and install it
-* This will enable the Quarto-specific features, including Quarto: Preview and code execution 
 
 ### Is RStudio going away?
 
-* No. We are committed to maintaining and updating RStudio.
+* No, we are committed to maintaining and updating RStudio.
 * While Positron and RStudio have some features in common, some R-focused features will remain exclusive to RStudio.
 * We began developing Positron as part of our mission to support open-source data science in multiple languages, including R and Python.
 * If you're currently using RStudio and are happy with the experience, you can continue to enjoy RStudio. RStudio includes 10+ years of applied optimizations for R data analysis and package development.
 
-### I'm coming from RStudio, and the Keymap is confusing
+### I'm coming from RStudio, and Positron's keybindings are too different
 
-* Check out the [RStudio Keymap](https://github.com/posit-dev/positron/wiki/Keyboard-Shortcuts#rstudio-keymap) section of our Wiki.
-You can replace the existing Keymap that tries to avoid overwriting or conflicting with existing defaults by:
-* Open Preferences: Open Settings via the Command Palette (Cmd/Ctrl+Shift+P) or the Gear icon at the bottom left of Positron
-* Search for Keymap
-* On "RStudio > Keymap Enable", check the box
+* Check out the [RStudio Keymap](keyboard-shortcuts.qmd#rstudio-keymap) section of our documentation. 
+* You can opt in to these RStudio-like keybindings:
+    * Open _Preferences: Open Settings_ via the Command Palette <kbd>Cmd/Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> or the gear icon at the bottom left of Positron
+    * Search for "keymap"
+    * Find "RStudio > Keymap: Enable", and check the box to opt in

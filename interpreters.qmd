@@ -14,7 +14,7 @@ Typically when starting Python or R without other clues about which version to s
 
 ### RStudio Detection
 
-Positron tries to start R for R users and Python for Python users by checking to see whether RStudio is installed and has been recently used. The latter check is done by looking in `~/.local/share/rstudio` for files written less than a month ago, so if you don't want Positron to consider you to be an RStudio user, you can rename this folder temporarily.
+Positron tries to start R for R users and Python for Python users by checking to see whether RStudio is installed and has been recently used. The latter check is done by looking in `~/.local/share/rstudio` for files written less than a month ago, so if you don't want Positron to consider you to be an RStudio user, you can remove or rename this folder temporarily.
 
 ## Subsequent Runs
 
@@ -24,10 +24,10 @@ If Positron starts an interpreter you don't need, just shut it down (using the P
 
 ## Implicit Startup
 
-In addition to starting up an interpreter when the workspace is first opened, Positron will also automatically start an interpreter when it looks like one is needed. For example, R will start:
+In addition to starting up an interpreter when the workspace is first opened, Positron will also automatically start an interpreter when it looks like one is needed. For example, Python will start:
 
-- When you open an R file
-- When you execute R code
+- When you open a `.py` file
+- When you execute Python code
 
 ## Start, Stop, and Switch Interpreters
 
@@ -35,7 +35,7 @@ Obviously, Positron might not always guess the right language for your workspace
 
 ### Choose a new interpreter
 
-To change your interpreter -- for example, to select a different Python environment -- click on the horizontal ellipsis (⋯) next to the interpreter.
+To change your interpreter -- for example, to select a different Python environment -- click on the horizontal ellipsis `...` next to the interpreter.
 
 ![Interpreter dropdown](images/tbid.png)
 

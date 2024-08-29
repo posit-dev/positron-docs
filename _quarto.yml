@@ -22,6 +22,8 @@ website:
         href: "https://posit.co/"
   navbar: 
     left:
+      - text: "Get Started"
+        href: start.qmd      
       - text: "Guides"
         href: interpreters.qmd      
       - text: "Help"

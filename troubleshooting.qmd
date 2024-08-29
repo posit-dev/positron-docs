@@ -2,7 +2,7 @@
 title: "Troubleshooting"
 ---
 
-If you're having trouble with Positron, here are some and tools to help you get back on track.
+If you're having trouble with Positron, here is some info and tools to help you get back on track.
 
 ## Reloading
 
@@ -14,7 +14,7 @@ A window reload shouldn't cause you to lose any state, but it does cause the Pos
 
 ### Output Panel
 
-Python and R logs are emitted in the Output panel. Each one starts several output channels that can be used to help diagnose problems with a respective part of the system. 
+Python and R logs are emitted in the Output panel. Each runtime starts several output channels that can be used to help diagnose problems with a respective part of the system. 
 
 Run the _Output: Show Output Channels_ command to show a list of output channels. You can then select one to view its output by name, like "Positron R Extension". Here's a list of some Positron-specific channels you may be interested in:
 

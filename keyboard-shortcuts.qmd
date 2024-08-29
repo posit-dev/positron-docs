@@ -8,7 +8,7 @@ Positron's keyboard shortcuts, with a few exceptions, are a superset of the keyb
 
 | Shortcut | Description |
 | -------- | ----------- |
-| <kbd>Cmd/Ctrl</kbd>+<kbd>Enter</kbd> | Run the selected code in the editor. If no code is selected, run the current statement. | 
+| <kbd>Cmd/Ctrl</kbd>+<kbd>Enter</kbd> | Run the selected code in the editor; if no code is selected, run the current statement | 
 | <kbd>Cmd/Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>0</kbd> | Restart the interpreter currently open in the Console | 
 | <kbd>Cmd/Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Enter</kbd> | Run the file open in the editor (using e.g. `source()` or `%run`) | 
 | <kbd>F1</kbd> | Show contextual help for the topic under the cursor |
@@ -36,7 +36,7 @@ If you'd prefer to use RStudio keybindings, do the following:
 - Search for "keymap", or navigate to *Extensions > RStudio Keymap*
 - Check the "Enable RStudio key mappings for Positron" checkbox
 
-The following RStudio keymappings will be enabled:
+The following RStudio keymappings will then be enabled:
 
 | Shortcut | Description |
 | -------- | ----------- |
@@ -62,7 +62,9 @@ The following RStudio keymappings will be enabled:
 
 ## Custom Shortcuts
 
-Because Positron is built on top of VS Code, you can use [its infrastructure for defining custom keybindings](https://code.visualstudio.com/docs/getstarted/keybindings). You can use this infrastructure with any Positron-specific commands, such as `workbench.action.executeCode.console` or `workbench.action.executeCode.silently`. As a specific example, you could add this to your user `keybindings.json` (access this file from the command palette with "Open Keyboard Shortcuts (JSON)") to make a keyboard shortcut to create a reprex from your current selection:
+Because Positron is built on top of VS Code, you can use [its infrastructure for defining custom keybindings](https://code.visualstudio.com/docs/getstarted/keybindings). You can use this infrastructure with any Positron-specific commands, such as `workbench.action.executeCode.console` or `workbench.action.executeCode.silently`. 
+
+As a specific example, you could add the following to your user `keybindings.json` (access this file from the Command Palette with *Open Keyboard Shortcuts (JSON)*) to make a keyboard shortcut to create a reprex from your current selection:
 
 ```json
 {

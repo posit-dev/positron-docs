@@ -7,97 +7,36 @@ description: |
 hide-description: true
 ---
 
-## Is Positron For Me?
+## What is Positron?
 
-:::{.callout-note}
-Positron is an early stage project under active development. We don't expect it to be the best fit for everyone doing data science right away.
+- A next-generation data science IDE built by [Posit PBC](https://posit.co/)
+- An extensible, polyglot tool for writing code and exploring data
+- A familiar environment for reproducible authoring and publishing
+
+:::{.callout-important}
+Positron is an early stage project under active development and may [not yet be a good fit for you](start.qmd#is-positron-for-me). If you are interested in experimenting with it, we welcome your feedback!
 :::
 
-#### Positron might be a good fit for you today if...
+![Positron, a next-generation data science IDE](images/astropy.png)
 
-* you use VS Code for data science (Python or R) but wish it included a dedicated console, variables pane, data explorer, and other affordances for your data-specific work.
-* you use Jupyterlab for data science (Python or R) and are ready for a more powerful, fully-featured IDE.
-* you use RStudio and want more ability to customize or extend your IDE.
-* you use additional languages in your day-to-day data science or package development work, like Rust, C++, JavaScript, or Lua.
+## Get started using Positron
 
-#### Positron might _not_ be a good fit for you today if...
+Find out what you need to know to [get started](start.qmd) using Positron, and explore our user guides on topics such as [choosing interpreters](interpreters.qmd) and the [Data Explorer](data-explorer.qmd). Our [FAQs](faqs.qmd) cover some common questions you may have. 
 
-* you need stable, polished software. Positron is still in beta, and some features are unstable or unfinished.
-* you need all the features of the RStudio IDE. Positron doesn’t have all RStudio’s features; some notable absences are inline output for Quarto and R Markdown, profiling, Sweave, RStudio Add-In support, etc.
-* you use remote development features (e.g. dev containers, remote SSH); these are not supported in Positron yet. However, providing tools for Remote SSH is on our roadmap.
+Positron is built on [Code OSS](https://github.com/microsoft/vscode). To learn about basic features like commands, settings, using source control, and more, see the [VS Code documentation](https://code.visualstudio.com/docs).
 
-## Machine Prerequisites
+## Install Positron
 
-Before installing Positron, ensure your Python and/or R environments are ready to work with Positron. You don't need to install both, but Positron does not bundle either Python or R.
+Install Positron from our [Releases](https://github.com/posit-dev/positron/releases) page on GitHub.
 
-### Windows Prerequisites
+Currently, Positron is producing pre-release builds from a continuous integration (CI) system for macOS, Windows, and Linux. These pre-release builds are tagged with a version number here on our Github repository. Select the build you want to download, then click on **Assets** and download the `.dmg` (for Mac), `.exe` (for Windows), or `.deb` (for Linux) file.
 
-If you're using Windows, make sure you have the [latest Visual C++ Redistributable](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#latest-microsoft-visual-c-redistributable-version) installed. 
+## Share your feedback about Positron
 
-### Python Prerequisites
+We invite you to join us on [GitHub Discussions](https://github.com/posit-dev/positron/discussions) to ask questions and share feedback. [Read more](feedback.qmd) about giving feedback and reporting bugs.
 
-Positron works with [actively supported versions](https://devguide.python.org/versions/#versions) of Python, from 3.8 to Python 3.12. We recommend [pyenv](https://github.com/pyenv/pyenv) and [pyenv for Windows](https://github.com/pyenv-win/pyenv-win) for managing Python versions.
+## License
 
-Positron communicates with Python via the IPykernel package, so it needs to be installed for the Python environment you want to use with Positron. If you are managing your Python project using a tool like venv or conda, add `ipykernel` to your `requirements.txt` file. You can install IPykernel manually as follows:
+Positron™ is licensed under the [Elastic License 2.0](https://github.com/posit-dev/positron?tab=License-1-ov-file#readme), a source-available license. [Read more](licensing.qmd) about what this license means and our decision to use it.
 
-``` bash
-python3 -m pip install ipykernel
-```
-
-Alternatively, Positron will prompt you to install the IPykernel package if it is not found when you first try to use a Python environment.
-
-### R Prerequisites
-
-Positron requires R 4.2 or higher. To install R, follow the instructions for your operating system at <https://cloud.r-project.org/>.
-
-Alternatively, if you'd like to have multiple R installations, [rig](https://github.com/r-lib/rig) is a great tool to manage this which works well with Positron.
-
-If you're an R package developer, you will also want to make sure that you have the current versions of certain R packages, all of which had some recent updates to make them work more smoothly in Positron. Run one of the code snippets below to ensure that you are up-to-date:
-
-``` r
-# if you're a pak person (we are!)
-pak::pak(c("usethis", "cli", "crayon", "rlang", "roxygen2", "pkgload"))
-
-# or using base R
-install.packages(c("usethis", "cli", "crayon", "rlang", "roxygen2", "pkgload"))
-```
-
-## Installing Positron
-
-Install Positron from our [Releases](https://github.com/posit-dev/positron/releases) page. 
-
-Currently, Positron is producing beta release builds from a continuous integration (CI) system for macOS, Windows, and Linux. Release builds are tagged with a version number on our Github repository. Select the release you want to download, then click on **Assets** and download the `.dmg` (for Mac), `.exe` (for Windows), or `.deb` (for Linux) file.
-
-## VS Code Extensions
-
-Since Positron is a fork of [Code OSS](https://github.com/microsoft/vscode), you can use VS Code extensions in Positron. Your extensions installed for Positron are _separate_ from the extensions you have installed for VS Code, and they will not interfere with each other. Positron bundles several extensions, including those for Quarto, Jupyter notebooks, and Pyright. To see bundled extensions, search for `@builtin` under the Extensions tab. To further filter the list, you can add a search term, such as `@builtin Positron`
-
-:::{.callout-note}
-Positron does _not_ currently bundle the [Shiny](https://open-vsx.org/extension/posit/shiny) extension, so you will need to install that if you want to use it.
-:::
-
-### Installing Extensions
-
-Positron has an Extensions view, just like VS Code. The primary difference is that when you browse extensions in Positron, the extensions do not come from VS Code's Marketplace. Instead, they come from a third-party marketplace, [OpenVSX](https://open-vsx.org/). This is necessary for licensing reasons; Microsoft does not permit access to the Marketplace from non-official clients. 
-
-OpenVSX includes most popular VS Code extensions, but not all; some authors do not bother to publish their extensions to OpenVSX (it's an extra step) and others don't keep the OpenVSX version of the extension up to date. Open VSX has a suggested [template](https://github.com/open-vsx/publish-extensions/blob/master/docs/external_contribution_request.md) to request that the authors of an extension cross-publish their extension on the Open VSX Registry.
-
-Posit is a major sponsor of OpenVSX.
-
-In offline or other environments, users may need to manually install extensions rather than relying on the search and install capabilities from the Positron extensions tab. Users can install extensions saved as `.vsix` files. See the "Extensions: Install from VSIX" command via the Command Palette (Cmd/Ctrl+Shift+P) or via the “...” in the top right of the Extensions tab.
-
-### Compatibility
-
-Almost all extensions for Visual Studio Code work great with Positron, and in fact Positron is built with this kind of extensibility in mind. There are two known exceptions:
-
--   [R extension](https://marketplace.visualstudio.com/items?itemName=REditorSupport.r): The R language support in Positron is a direct replacement for the features in this extension, and we do not plan for them to work well together. If there are features in this extension you miss, please let us know. If you use this extension and have code in your `.Rprofile` for better behavior in the terminal, you will need to update it so that section of your `.Rprofile` is not run in Positron:
-
-```r
-if (interactive() && Sys.getenv("RSTUDIO") == "" && Sys.getenv("POSITRON") == "") {
-  ## code you use for better terminal behavior for R in VS Code
-}
-```
-
--   [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python): Positron bundles a fork of this extension that is built to work with Positron and offers support for the console, help, and other features. If there is anything from the original Python extension that does not work for you, please let us know.
-
-There may be extensions that aren't available for Positron for licensing rather than technical reasons. These extensions would typically contain proprietary Microsoft code and are only licensed for use with Microsoft's proprietary VS Code product.
+Positron™ and the Positron icon™ are trademarks of Posit Software, PBC. All rights reserved.
