@@ -13,10 +13,6 @@ hide-description: true
 - An extensible, polyglot tool for writing code and exploring data
 - A familiar environment for reproducible authoring and publishing
 
-:::{.callout-important}
-Positron is an early stage project under active development and may [not yet be a good fit for you](start.qmd#is-positron-for-me). If you are interested in experimenting with it, we welcome your feedback!
-:::
-
 ![Positron, a next-generation data science IDE](images/astropy.png)
 
 ## Get started using Positron

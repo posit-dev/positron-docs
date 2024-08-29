@@ -3,6 +3,12 @@ project:
   type: posit-docs
 
 website:
+  announcement: 
+    icon: info-circle
+    dismissable: false
+    content: "Positron is available for beta testing and may [not yet be a good fit for you](start.qmd#is-positron-for-me). If you are interested in experimenting with it, we welcome your feedback!"
+    type: danger
+    position: below-navbar
   page-footer:
     left: |
       Copyright &copy; 2022-2024 Posit Software, PBC. All Rights Reserved.
@@ -30,6 +36,12 @@ website:
         href: troubleshooting.qmd
 
   sidebar:
+    - title: "Get Started"
+      style: "docked"
+      contents:
+        - start.qmd
+        - extensions.qmd
+
     - title: "Guides"
       style: "docked"
       contents:

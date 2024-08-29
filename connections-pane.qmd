@@ -41,5 +41,5 @@ the database icon that appears close to the object name in the Variables Pane.
 
 ![Variables Pane showing a connection object](images/connections-pane-variables-pane.png)
 
-That should bring up the Connections Pane, allowing you to navigate the database.
+That will bring up the Connections Pane, allowing you to navigate the database.
 
