@@ -32,7 +32,7 @@ Positron's keyboard shortcuts, with a few exceptions, are a superset of the keyb
 
 If you'd prefer to use RStudio keybindings, do the following:
 
-- Open Positron's settings (<kbd>Cmd</kbd>+<kbd>,</kbd> or <kbd>Ctrl</kbd>+<kbd>,</kbd>)
+- Open Positron's settings via <kbd>Cmd/Ctrl</kbd>+<kbd>,</kbd>
 - Search for "keymap", or navigate to *Extensions > RStudio Keymap*
 - Check the "Enable RStudio key mappings for Positron" checkbox
 

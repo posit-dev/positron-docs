@@ -14,7 +14,7 @@ Typically when starting Python or R without other clues about which version to s
 
 ### RStudio Detection
 
-Positron tries to start R for R users and Python for Python users by checking to see whether RStudio is installed and has been recently used. The latter check is done by looking in `~/.local/share/rstudio` for files written less than a month ago, so if you don't want Positron to consider you to be an RStudio user, you can remove or rename this folder temporarily.
+Positron tries to start R for R users and Python for Python users by checking to see whether RStudio is installed and has been recently used. The latter check is done by looking in `~/.local/share/rstudio` for files written less than a month ago, so if you don't want Positron to consider you to be an RStudio user, you can remove this folder or rename it temporarily.
 
 ## Subsequent Runs
 

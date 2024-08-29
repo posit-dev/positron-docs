@@ -24,7 +24,7 @@ dbplyr::nycflights13_sqlite(path = tmp)
 con <- connections::connection_open(RSQLite::SQLite(), file.path(tmp, "nycflights13.sqlite"))
 ```
 
-You can find more information about connecting to an specific database [from Posit Solutions Engineering](https://solutions.posit.co/connections/db/databases/).
+You can also open an existing connection from the Variables Pane, as shown below for Python, and you can find more information about connecting to a specific database [from Posit Solutions Engineering](https://solutions.posit.co/connections/db/databases/).
 
 ## Opening a connection using Python
 

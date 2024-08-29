@@ -6,7 +6,7 @@ website:
   announcement: 
     icon: info-circle
     dismissable: false
-    content: "Positron is available for beta testing and may [not yet be a good fit for you](start.qmd#is-positron-for-me). If you are interested in experimenting with it, we welcome your feedback!"
+    content: "Positron is available for beta testing and [may not yet be a good fit for you](start.qmd#is-positron-for-me). If you are interested in experimenting with it, we welcome your [feedback](feedback.qmd)!"
     type: danger
     position: below-navbar
   page-footer:
