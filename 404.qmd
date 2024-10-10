@@ -3,4 +3,4 @@ title: "Page Not Found"
 format: html
 ---
 
-Oops! The page you requested isn't available. Try searching our documentation or find out [how to get started](start.qmd) with Positron.
+Oops! The page you requested isn't available. Try [searching our documentation](start.html?q=+&show-results=1) or find out [how to get started](start.qmd) with Positron.
