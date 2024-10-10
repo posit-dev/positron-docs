@@ -2,7 +2,7 @@
 title: "Data Explorer"
 ---
 
-The Data Explorer is designed to complement code-first exploration of data, allowing you to display data in a spreadsheet-like grid, temporarily filter and sort data, and provide useful summary statistics directly inside of Positron. The goal of the Data Explorer isn't to replace code-based workflows, but rather supplement with ephemeral views of the data or summary statistics as you further explore or modify the data via code.
+The Data Explorer is designed to complement code-first exploration of data, allowing you to display data in a spreadsheet-like grid, temporarily filter and sort data, and provide useful summary statistics directly inside of Positron. The goal of the Data Explorer is not to replace code-based workflows, but rather supplement with ephemeral views of the data or summary statistics as you further explore or modify the data via code.
 
 The Data Explorer has three primary components, discussed in greater detail in the sections below:  
 
