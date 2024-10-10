@@ -15,7 +15,7 @@ We're particularly interested in feedback on the following:
 - Ideas for features
 - What's missing
 - What works for you
-- What does not
+- What doesn't
 
 ## Reporting issues
 

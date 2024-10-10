@@ -2,7 +2,7 @@
 title: "Updating Positron"
 ---
 
-Positron does not currently have a built-in update mechanism; you can [track our work on this feature on GitHub](https://github.com/posit-dev/positron/issues/1837). In the meantime, there are a few helpers available to you to manage manual updates.
+Positron doesn't currently have a built-in update mechanism; you can [track our work on this feature on GitHub](https://github.com/posit-dev/positron/issues/1837). In the meantime, there are a few helpers available to you to manage manual updates.
 
 ## macOS
 
@@ -23,7 +23,7 @@ Then you can download and install the latest version of Positron via:
 ```
 
 :::{.callout-note}
-Unfortunately, this approach does not check your current version of Positron; it will _always_ download and install the latest version.
+Unfortunately, this approach doesn't check your current version of Positron; it will _always_ download and install the latest version.
 :::
 
 ## Windows
