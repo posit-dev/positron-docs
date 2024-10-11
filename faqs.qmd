@@ -18,7 +18,7 @@ title: "Frequently Asked Questions"
 
 ### Why build a new IDE rather than VS Code extensions?
 
-* Our aspirations for Positron go far beyond what is possible via only extensions. Ultimately, VS Code's Extension API doesn't provide enough leverage to modify the main "workbench" surface.
+* Our aspirations for Positron go far beyond what is possible via only extensions. Ultimately, VS Code's Extension API does not provide enough leverage to modify the main "workbench" surface.
 * To deliver a truly excellent data science experience, we need to change and augment core components and UI elements that are outside the scope of VS Code's extension API.
 * We have developed some components as extensions for use in both Positron and VS Code, such as Quarto and Shiny for R/Python. However, given the additional API surface in Positron, we plan to progressively enhance these and future extensions when installed in Positron.
 

@@ -22,7 +22,7 @@ Positron is an early stage project under active development. We don't expect it 
 
 ## Machine prerequisites
 
-Before installing Positron, ensure your Python and/or R environments are ready to work with Positron. You don't need to install both, but Positron doesn't bundle either Python or R.
+Before installing Positron, ensure your Python and/or R environments are ready to work with Positron. You don't need to install both, but Positron does not bundle either Python or R.
 
 ### Windows prerequisites
 
@@ -38,7 +38,7 @@ Positron communicates with Python via the IPykernel package, so it needs to be i
 python3 -m pip install ipykernel
 ```
 
-Alternatively, Positron prompts you to install the IPykernel package if it isn't found when you initially try to use a Python environment.
+Alternatively, Positron prompts you to install the IPykernel package if it is not found when you initially try to use a Python environment.
 
 ### R prerequisites
 
