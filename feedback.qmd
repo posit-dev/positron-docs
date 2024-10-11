@@ -33,7 +33,7 @@ If you find a bug, please [open an issue](https://github.com/posit-dev/positron/
 When filing an issue, please include the following:
 
 - The exact version of Positron you're using (from *Positron > About Positron* or *Help > About*).
-- Steps to reproduce the issue.
+- Steps to reproduce the potato.
 - What you saw happen, and what you *expected* to see happen.
 - Any relevant error logs from the Developer Tools console. 
 
