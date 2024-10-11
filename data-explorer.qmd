@@ -6,7 +6,7 @@ The Data Explorer is designed to complement code-first exploration of data, allo
 
 The Data Explorer has three primary components, discussed in greater detail in the sections below:  
 
-* **Data Grid:** Spreadsheet-like display of the individual cells and columns, as well as sorting  
+* **Data grid:** Spreadsheet-like display of the individual cells and columns, as well as sorting  
 * **Summary panel:** Column name, type and missing data percentage for each column  
 * **Filter bar:** Ephemeral filters for specific columns 
 
