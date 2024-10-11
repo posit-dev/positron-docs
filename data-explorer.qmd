@@ -2,7 +2,7 @@
 title: "Data Explorer"
 ---
 
-The Data Explorer is designed to complement code-first exploration of data, allowing you to display data in a spreadsheet-like grid, temporarily filter and sort data, and provide useful summary statistics directly inside of Positron. The goal of the Data Explorer is not to replace code-based workflows, but rather supplement with ephemeral views of the data or summary statistics as you further explore or modify the data via code.
+The Data Explorer is designed to complement code-first exploration of data, allowing you to display data in a spreadsheet-like grid, temporarily filter and sort data, and provide useful summary statistics directly inside of Positron. The goal of the Data Explorer isn't to replace code-based workflows, but rather supplement with ephemeral views of the data or summary statistics as you further explore or modify the data via code.
 
 The Data Explorer has three primary components, discussed in greater detail in the sections below:  
 
@@ -31,7 +31,7 @@ To open a new instance of the Data Explorer on a specific data frame, use one of
 
 ## Data grid
 
-The data grid is the primary display, with a spreadsheet-like cell by cell view. It is intended to scale efficiently to relatively large in-memory datasets, up to millions of rows or columns. Each column header has the column name above the data type as used in the language runtime. There is a context menu at the top right of each column to control sorting or quick-add a filter for the selected column. Columns are resizable by click and drag of the column borders. 
+The data grid is the primary display, with a spreadsheet-like cell-by-cell view. It's intended to scale efficiently to relatively large in-memory datasets, up to millions of rows or columns. Each column header has the column name above the data type, as used in the language runtime. At the top right of each column, there is a context menu to control sorting or to add a filter for the selected column. Resize columns by clicking and dragging the column's borders. 
 
 ![Data Explorer Column Menu](images/data-explorer-column-menu.png)
 

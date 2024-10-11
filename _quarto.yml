@@ -1,6 +1,8 @@
 project:
   title: "Positron"
   type: posit-docs
+  render:
+    - "*.qmd"
 
 website:
   announcement: 

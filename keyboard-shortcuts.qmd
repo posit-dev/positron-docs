@@ -4,7 +4,7 @@ title: "Keyboard Shortcuts"
 
 Positron's keyboard shortcuts, with a few exceptions, are a superset of the keyboard shortcuts used by Visual Studio Code. This table lists the shortcuts specifically added for Positron.
 
-## Global Shortcuts
+## Global shortcuts
 
 | Shortcut | Description |
 | -------- | ----------- |
@@ -16,7 +16,7 @@ Positron's keyboard shortcuts, with a few exceptions, are a superset of the keyb
 | <kbd>Cmd/Ctrl</kbd>+<kbd>K</kbd>, <kbd>F</kbd> | Focus the Console |
 | <kbd>Ctrl</kbd>+<kbd>L</kbd> | Clear the Console |
 
-## R Shortcuts
+## R shortcuts
 
 | Shortcut | Description |
 | -------- | ----------- |
@@ -28,7 +28,7 @@ Positron's keyboard shortcuts, with a few exceptions, are a superset of the keyb
 | <kbd>Cmd/Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>E</kbd> | Check the current R package, if any | 
 | <kbd>Cmd/Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>D</kbd> | Document the current R package, if any | 
 
-## RStudio Keymap
+## RStudio keymap
 
 If you'd prefer to use RStudio keybindings, do the following:
 
@@ -60,7 +60,7 @@ The following RStudio keymappings will then be enabled:
 | <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>K</kbd> | Open global keybindings list |
 | <kbd>Alt</kbd>+<kbd>-</kbd> | Insert left assignment operator `<-` |
 
-## Custom Shortcuts
+## Custom shortcuts
 
 Because Positron is built on top of VS Code, you can use [its infrastructure for defining custom keybindings](https://code.visualstudio.com/docs/getstarted/keybindings). You can use this infrastructure with any Positron-specific commands, such as `workbench.action.executeCode.console` or `workbench.action.executeCode.silently`. 
 

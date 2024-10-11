@@ -11,7 +11,7 @@ It also includes basic support for storing and managing connection strings for f
 
 To open a connection in Positron Connections Pane, you just need to connect to a database using using any
 package that supports the connections contract, such as [odbc](https://github.com/r-dbi/odbc), [sparklyr](https://github.com/rstudio/sparklyr),
-[bigrquery](https://github.com/r-dbi/bigrquery) and others.
+[bigrquery](https://github.com/r-dbi/bigrquery), and others.
 
 The Positron Connections Pane implements [RStudio's connections contract](https://rstudio.github.io/rstudio-extensions/connections-contract.html); this means that any package that works within RStudio's Connections Pane should work within the Positron Connections Pane.
 

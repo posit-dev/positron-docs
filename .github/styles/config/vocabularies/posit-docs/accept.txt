@@ -1,0 +1,25 @@
+RStudio
+Sonoma
+Posit Team
+Posit
+toolchain
+Posit Package Manager
+Package Manager
+Posit Connect
+Connect
+Posit Workbench
+Workbench
+RStudio IDE
+Posit, PBC
+PBC
+SageMaker
+required
+RHEL
+CentOS
+Linux
+Ubuntu
+Debian
+Debian Linux
+is configured
+is installed
+Data Explorer

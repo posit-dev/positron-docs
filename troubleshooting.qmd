@@ -10,9 +10,9 @@ Positron is an Electron app. If you're seeing what looks like a temporary glitch
 
 A window reload shouldn't cause you to lose any state, but it does cause the Positron front end and all language packs to restart. 
 
-## Python and R Logs
+## Python and R logs
 
-### Output Panel
+### Output panel
 
 Python and R logs are emitted in the Output panel. Each runtime starts several output channels that can be used to help diagnose problems with a respective part of the system. 
 
@@ -25,11 +25,11 @@ Run the _Output: Show Output Channels_ command to show a list of output channels
 | Python Language Server | Debug logs from the server side of Positron's Python language server |
 | Positron R Language Server | Debug logs from the server side of Positron's R language server |
 
-### Log Level
+### Log level
 
 Most of these output channels have a log level associated with them that you can change in the settings UI. 
 
-## Developer Tools
+## Developer tools
 
 When looking for the source of an error, the developer tools can be helpful. From the Command Palette, run the _Developer: Toggle Developer Tools_ command. Then, from the Developer Tools panel that appears, select the _Console_ tab.
 
@@ -46,6 +46,6 @@ rm -rf ~/.positron
 
 Then, download the [latest release](https://github.com/posit-dev/positron/releases) of Positron and install it.
 
-## Ask for Help
+## Ask for help
 
 Finally, ask for help early and often. If you're having trouble as one of our beta testers, we'd like to hear about it, perhaps even before you blow away any state that might tell us what the issue was. Join us on [GitHub Discussions](https://github.com/posit-dev/positron/discussions)!
