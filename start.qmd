@@ -38,7 +38,7 @@ Positron communicates with Python via the IPykernel package, so it needs to be i
 python3 -m pip install ipykernel
 ```
 
-Alternatively, Positron will prompt you to install the IPykernel package if it isn't found when you first try to use a Python environment.
+Alternatively, Positron prompts you to install the IPykernel package if it isn't found when you initially try to use a Python environment.
 
 ### R prerequisites
 
