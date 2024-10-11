@@ -31,7 +31,7 @@ To open a new instance of the Data Explorer on a specific data frame, use one of
 
 ## Data grid
 
-The data grid is the primary display, with a spreadsheet-like cell by cell view. it's intended to scale efficiently to relatively large in-memory datasets, up to millions of rows or columns. Each column header has the column name above the data type as used in the language runtime. There is a context menu at the top right of each column to control sorting or quick-add a filter for the selected column. Columns are resizable by click and drag of the column borders. 
+The data grid is the primary display, with a spreadsheet-like cell by cell view. It's intended to scale efficiently to relatively large in-memory datasets, up to millions of rows or columns. Each column header has the column name above the data type as used in the language runtime. There is a context menu at the top right of each column to control sorting or quick-add a filter for the selected column. Columns are resizable by click and drag of the column borders. 
 
 ![Data Explorer Column Menu](images/data-explorer-column-menu.png)
 
